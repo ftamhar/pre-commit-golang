@@ -99,3 +99,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod vendor`, requires golang"
+-   id: go-semgrep
+    name: 'go semgrep'
+    entry: run-go-semgrep.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `semgrep ci --config=http://sast.netzen.net.id/scan/go`, requires https://github.com/returntocorp/semgrep"

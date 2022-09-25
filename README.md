@@ -25,11 +25,12 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-unit-tests
         - id: go-build
         - id: go-mod-tidy
+        - id: go-semgrep
 
 ### Available hooks
 
 - `go-fmt` - Runs `gofmt`, requires golang
-- `go-fumpt` - Runs `gofumpt`, requires https://github.com/mvdan/gofumpt
+- `go-fumpt` - Runs `gofumpt -l -w`, requires [gofumpt](https://github.com/mvdan/gofumpt)
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint but is unmaintained & deprecated in favour of [`golangci-lint`](https://github.com/golangci/golangci-lint)
 - `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
@@ -45,3 +46,4 @@ Add this to your `.pre-commit-config.yaml`
 - `go-build` - run `go build`, requires golang
 - `go-mod-tidy` - run `go mod tidy -v`, requires golang
 - `go-mod-vendor` - run `go mod vendor`, requires golang
+- `go-semgrep` - run `semgrep ci --config=http://sast.netzen.net.id/scan/go`, requires [semgrep](https://github.com/returntocorp/semgrep)
